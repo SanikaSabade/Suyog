@@ -26,7 +26,7 @@ const Casting = () => {
           
           <div className="space-y-6 text-black">
             <p className="text-lg text-pretty font-medium">
-              AR Polymers is a sister concern of APM Plast expert in Polyurethane casting and coating from last 20 years.
+              AR Polymers is a sister concern of Suyog Plastics expert in Polyurethane casting and coating from last 20 years.
               we offer this Polyurethane casting as per requirement, tailor made/customised with highest efficiency and high quality.
               We have Automatic metering mixing and dispensing machine for polyurethane Casting.
               Ability to handle wide range of polyurethane items, from 40 shore A to 75 Shore D Hardness.
