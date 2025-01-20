@@ -37,7 +37,7 @@ function Header() {
             <li key={item}>
               <a onClick={()=> {
                 router.push("/")
-                if (item === "About" || item === "Gallery") {
+                if (item === "About" || item === "Gallery"  || item === "Contact") {
                 router.push(`/${item.toLowerCase()}`);
               }
               else{

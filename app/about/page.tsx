@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import Footer from '@/components/Footer';
+import Button from '@/components/Button';
 
 const SuyogAbout: React.FC = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -9,7 +10,7 @@ const SuyogAbout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-primarybg ">
 
-<section className="p-20 bg-primaryYellow relative ">
+<section className="p-20 bg-primaryYellow/85 relative ">
       <div className="w-full">
         <h1 className="text-2xl font-bold text-primaryBlack p-10 flex justify-center font-manrope">ABOUT US</h1>
         <div className="flex flex-col lg:flex-row w-full items-start">
@@ -74,7 +75,7 @@ const SuyogAbout: React.FC = () => {
                   { id: 'quality', label: 'QUALITY POLICY' },
                   { id: 'products', label: 'PRODUCTS AND SERVICES' }
                 ].map((tab) => (
-                  <button
+                  <Button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`
@@ -85,7 +86,7 @@ const SuyogAbout: React.FC = () => {
                     `}
                   >
                     {tab.label}
-                  </button>
+                  </Button>
                 ))}
               </div>
 

@@ -4,9 +4,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "@/components/Button"; 
+import { useRouter } from 'next/navigation';
+
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter();
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,7 +36,6 @@ const Hero = () => {
             className="flex transition-transform duration-500 ease-in-out h-full"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-            {/* Slide 1 */}
             <div className="min-w-full h-full relative">
               <div className="absolute top-0 left-0 w-full h-full">
                 <Image
@@ -58,7 +61,9 @@ const Hero = () => {
                     <p>and Epoxy Casting.</p>
                   </div>
                   <div className="flex justify-center">
-                    <Button className="bg-primaryYellow hover:bg-primaryLight font-semibold text-black rounded-lg p-2 text-lg  transition-colors">
+                    <Button 
+                    onClick={() => router.push('/contact')}
+                    className="bg-primaryYellow hover:bg-primaryLight font-semibold text-black rounded-lg p-2 text-lg  transition-colors">
                       Contact Us
                     </Button>
                   </div>
@@ -66,7 +71,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Slide 2 */}
             <div className="min-w-full h-full relative">
               <div className="relative w-full h-full">
                 <Image
@@ -86,14 +90,15 @@ const Hero = () => {
                     Suyog Plastics Will Be A Perfect Choice For You As A
                     One-Stop Solution.
                   </p>
-                  <Button className="bg-primaryYellow hover:bg-primaryLight text-black p-2 rounded-lg text-lg font-semibold transition-colors">
+                  <Button
+                  onClick={() => router.push('/contact')}
+                   className="bg-primaryYellow hover:bg-primaryLight text-black p-2 rounded-lg text-lg font-semibold transition-colors">
                     Contact Us
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* Slide 3 */}
             <div className="min-w-full h-full relative">
               <div className="absolute inset-0">
                 <Image
@@ -115,7 +120,9 @@ const Hero = () => {
                       <p>products & services and follow the best</p>
                       <p>industrial practices of manufacturing.</p>
                     </div>
-                    <Button className="bg-primaryYellow hover:bg-primaryLight text-black p-2 rounded-lg text-lg font-semibold transition-colors w-fit">
+                    <Button                    
+                     onClick={() => router.push('/contact')}
+                    className="bg-primaryYellow hover:bg-primaryLight text-black p-2 rounded-lg text-lg font-semibold transition-colors w-fit">
                       Contact Us
                     </Button>
                   </div>
@@ -138,7 +145,6 @@ const Hero = () => {
             <ChevronRight size={24} />
           </button>
 
-          {/* Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
             {[0, 1, 2].map((index) => (
               <button

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className="p-8 bg-primaryYellow relative ">
+    <section className="p-8 bg-primaryYellow/85 relative ">
       <div className="w-full">
         <h1 className="text-2xl font-bold text-primaryBlack p-10 flex justify-center font-manrope">ABOUT US</h1>
         <div className="flex flex-col lg:flex-row w-full items-start">
