@@ -8,9 +8,20 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        manrope: ["'Manrope'", "sans-serif"],
+    
+  
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+          primaryLight:"#C6E7FF",
+          primaryDark:"#030637",
+          primaryYellow:"#F6C90E",
+          primaryBlack:"#282930",
+          primaryGray:"#777C90",
+          primarybg:"#F2F4F6",
       },
     },
   },
